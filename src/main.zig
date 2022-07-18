@@ -1,15 +1,9 @@
 const std = @import("std");
 
-const add = @import("add.zig").add;
+const Vec3 = @import("vec.zig").Vec3;
 
 pub fn main() anyerror!void {
-    // Note that info level log messages are by default printed only in Debug
-    // and ReleaseSafe build modes.
-    std.log.info("All your codebase are belong to us.", .{});
+    const v = Vec3.new(1, 2, 3);
 
-    std.debug.print("{d}", .{add(1, 2)});
-}
-
-test "basic test" {
-    try std.testing.expectEqual(10, 3 + 7);
+    std.debug.print("({d}, {d}, {d})", .{ v.x, v.y, v.z });
 }
