@@ -93,15 +93,10 @@ test "operators" {
     const sum = v1.add(v2);
 
     try expect(sum.partial_eq(Vec3.new(3, 5, 7)));
-
     try expect(v2.sub(v1).partial_eq(Vec3.new(1, 1, 1)));
-
     try expect(v1.mul(v2).partial_eq(Vec3.new(2, 6, 12)));
-
     try expect(v1.mulScaler(2).partial_eq(Vec3.new(2, 4, 6)));
-
     try expect(v1.devide(v2).partial_eq(Vec3.new(1.0 / 2.0, @as(f32, 2.0 / 3.0), @as(f32, 3.0 / 4.0))));
-
     try expect(v1.devideScaler(2).partial_eq(Vec3.new(1.0 / 2.0, 1, 3.0 / 2.0)));
 }
 
