@@ -19,3 +19,9 @@ pub fn main() anyerror!void {
 
     std.debug.print("({d}, {d}, {d})\n", .{ p.x, p.y, p.z });
 }
+
+test {
+    _ = @import("vec.zig");
+    _ = @import("ray.zig");
+    _ = @import("sphere.zig");
+}
