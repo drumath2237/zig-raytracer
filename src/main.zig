@@ -19,4 +19,5 @@ test {
     _ = @import("ray.zig");
     _ = @import("sphere.zig");
     _ = @import("hit.zig");
+    _ = @import("light.zig");
 }
